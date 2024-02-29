@@ -127,12 +127,12 @@ def createteam():
         # Insert the new team into the database
         connection = mysql.connector.connect(host="localhost", user="root", password="steaninav", database="formula")
         cursor = connection.cursor()
-        """
+
         # Insert new team into teams table
         cursor.execute('''INSERT INTO teams (Team_Id, Team_Name, Origin, Driver_1, Driver_2) 
                           VALUES (%s, %s, %s, %s, %s)''', (team_id, team_name, team_origin, driver1, driver2))
         connection.commit()
-
+        """
         # Calculate the next Pos value based on the highest Pos value in constructor_standings table
         cursor.execute("SELECT MAX(Pos) AS max_pos FROM constructor_standings")
         max_pos = cursor.fetchone()[0]
@@ -311,6 +311,7 @@ def get_all_drivers():
     cursor.close()
     connection.close()
     return drivers
+
 
 @app.route('/fiaAdmin/updatedriver', methods=['GET', 'POST'])
 def updatedriver():
