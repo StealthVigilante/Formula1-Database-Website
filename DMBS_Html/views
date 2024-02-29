@@ -1,0 +1,8 @@
+CREATE VIEW all_drivers_view AS
+SELECT
+    d.Driver_Name,
+    d.Nationality,
+    d.Age,
+    t.Team_Name AS Team
+FROM drivers d
+LEFT JOIN teams t ON d.Driver_Id = t.Driver_1 OR d.Driver_Id = t.Driver_2;
