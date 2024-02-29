@@ -1,0 +1,22 @@
+DELIMITER //
+CREATE TRIGGER after_team_insert
+AFTER INSERT ON teams
+FOR EACH ROW
+BEGIN
+    DECLARE max_pos INT;
+    SELECT MAX(Pos) INTO max_pos FROM constructor_standings;
+    SET max_pos = IFNULL(max_pos, 0);
+    INSERT INTO constructor_standings (Team_id, Pos, Team_name, Wins, Podiums, Total_Points)
+    VALUES (NEW.Team_Id, max_pos + 1, NEW.Team_Name, 0, 0, 0);
+END //
+CREATE TRIGGER after_driver_insert
+AFTER INSERT ON drivers
+FOR EACH ROW
+BEGIN
+    DECLARE max_pos INT;
+    SELECT MAX(Pos) INTO max_pos FROM driver_standings;
+    SET max_pos = IFNULL(max_pos, 0);
+    INSERT INTO driver_standings (Pos, Driver_id, Driver_Name, Wins, Podiums, Total_points)
+    VALUES (max_pos + 1, NEW.Driver_Id, NEW.Driver_Name, 0, 0, 0);
+END //
+DELIMITER ;
