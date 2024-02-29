@@ -127,7 +127,7 @@ def createteam():
         # Insert the new team into the database
         connection = mysql.connector.connect(host="localhost", user="root", password="steaninav", database="formula")
         cursor = connection.cursor()
-
+        """
         # Insert new team into teams table
         cursor.execute('''INSERT INTO teams (Team_Id, Team_Name, Origin, Driver_1, Driver_2) 
                           VALUES (%s, %s, %s, %s, %s)''', (team_id, team_name, team_origin, driver1, driver2))
@@ -142,7 +142,7 @@ def createteam():
         cursor.execute('''INSERT INTO constructor_standings (Team_id, Pos,Team_name,Wins,Podiums, Total_Points) 
                           VALUES (%s, %s, %s, 0, 0, 0)''', (team_id, next_pos, team_name))
         connection.commit()
-
+        """
         cursor.close()
         connection.close()
 
@@ -168,6 +168,7 @@ def createdriver():
         cursor.execute('''INSERT INTO drivers (Driver_Id, Driver_Name, Nationality, Age) 
                           VALUES (%s, %s, %s, %s)''', (driver_id, driver_name, driver_nationality, driver_age))
         connection.commit()
+        """
         cursor.execute("SELECT MAX(Pos) AS max_pos FROM driver_standings")
         max_pos = cursor.fetchone()[0]
         next_pos = max_pos + 1 if max_pos is not None else 1
@@ -175,7 +176,7 @@ def createdriver():
         cursor.execute('''INSERT INTO driver_standings (Pos,Driver_id,Driver_Name,Wins,Podiums,Total_points) 
                                   VALUES (%s, %s, %s, 0, 0, 0)''', (next_pos, driver_id, driver_name))
         connection.commit()
-
+        """
         cursor.close()
         connection.close()
 
