@@ -31,6 +31,21 @@ def index():
     return render_template('index.html', constructorStandings=standings_data, driverStandings=standings_data2)
 
 
+@app.route('/AllDrivers')
+def all_drivers():
+    connection = mysql.connector.connect(host="localhost", user="root", password="steaninav", database="formula")
+    cursor = connection.cursor(dictionary=True)
+
+    # Fetch data from the updated view
+    cursor.execute("SELECT * FROM all_drivers_view")
+    drivers_data = cursor.fetchall()
+
+    cursor.close()
+    connection.close()
+
+    return render_template('all_drivers.html', drivers=drivers_data)
+
+
 @app.route('/allteams')
 def allteams():
     connection = mysql.connector.connect(host="localhost", user="root", password="steaninav", database="formula")
