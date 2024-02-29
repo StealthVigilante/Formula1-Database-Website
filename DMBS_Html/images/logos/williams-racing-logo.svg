@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 700 700"
+   class="r-10ptun7 r-1w88a7h"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="williams-racing-logo.svg"
+   width="700"
+   height="700"
+   style="fill:none"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:export-filename="C:\Users\suitedoalex\sites\williams-racing-logo-5.png"
+   inkscape:export-xdpi="54.857143"
+   inkscape:export-ydpi="54.857143">
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="0.65446087"
+     inkscape:cx="376.68181"
+     inkscape:cy="219.72987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <g
+     clip-path="url(#a)"
+     id="g6"
+     transform="translate(7.7899256,753.90232)"
+     inkscape:export-filename="C:\Users\suitedoalex\sites\williams-racing-logo-4.png"
+     inkscape:export-xdpi="56.109169"
+     inkscape:export-ydpi="56.109169">
+    <path
+       d="m 196.26,48.84 h 10.92 V 0.73 H 196.26 Z M 164.5,0.73 h -10.91 v 48.11 h 31.7 v -8.7 H 164.5 Z M 300.88,26.62 277.58,0.18 h -1.46 v 48.7 h 10.53 V 31.16 A 71.72,71.72 0 0 0 286.3,23 c 0,0 1.85,2.84 3.72,5.09 l 10.14,12.49 h 1.54 l 10.09,-12.49 c 1.82,-2.24 3.67,-5.08 3.67,-5.08 a 71.72,71.72 0 0 0 -0.35,8.16 v 17.71 h 10.53 V 0.18 h -1.46 z m 61.06,-6.63 -2.48,-1.06 c -3.23,-1.37 -6.1,-2.91 -6.1,-5.89 0,-2.41 1.37,-4 4.28,-4 a 7.559,7.559 0 0 1 6.58,4.2 l 8.18,-4.87 c -3.45,-6 -9,-8.39 -15,-8.39 -8.86,0 -14.39,5.81 -14.55,13.25 -0.17,8.27 5.72,12 12.88,15.05 l 2.48,1.06 c 4.54,2 6.67,3.49 6.59,6.5 -0.09,2.84 -2,4.89 -6.09,4.89 -4.89,0 -7.77,-2.69 -9.5,-6.37 l -8.64,4.94 c 2.34,5.42 8.82,10.4 18.07,10.4 9.25,0 16.73,-4.85 17.05,-13.77 0.27,-7.69 -4.88,-12.46 -13.74,-16 z M 31.62,0.33 13.9,38.73 17.6,48.84 h 1.73 L 30.02,24.75 a 36.617,36.617 0 0 0 2.37,-6.06 39.925,39.925 0 0 0 2.33,6 L 45.47,48.84 H 47.2 L 50.89,38.73 33.18,0.33 Z M 11.26,0.73 H 0.02 l 12.74,34.89 6,-13.08 z M 45.94,22.42 52.02,35.62 64.8,0.73 H 53.45 Z M 79.38,48.84 H 90.29 V 0.73 H 79.38 Z M 121.49,0.73 h -10.91 v 48.11 h 31.7 v -8.7 h -20.79 z m 120.37,31.98 h -5.44 l 4.14,-10.62 c 0.78,-2 1.3,-3.69 1.3,-3.69 0,0 0.51,1.71 1.29,3.69 l 4.14,10.57 z m 0.78,-32.48 h -1.56 L 219.6,48.77 h 10.48 l 3.13,-7.7 h 17.29 l 3.13,7.7 h 10.49 z"
+       id="path2"
+       inkscape:connector-curvature="0"
+       style="fill:#041e42" />
+    <path
+       d="m 551.79,0.73 h 10.92 V 48.84 H 551.79 Z M 530.28,32.74 530,33.17 c -3.08,4.7 -6.58,6.71 -11.71,6.71 -8,0 -13.77,-6.32 -13.77,-15 0,-8.68 5.66,-14.88 13.77,-14.88 a 12.409,12.409 0 0 1 11,5.92 l 0.28,0.46 8.24,-5.85 -0.26,-0.41 C 533.3,3.46 527.02,0.23 518.29,0.23 c -14.11,0 -24.75,10.59 -24.75,24.62 0,14.03 10.64,24.69 24.75,24.69 8.7,0 15.65,-3.68 20.11,-10.63 l 0.26,-0.41 z m 154.08,-9.58 v -0.47 h -23 v 9.45 h 11.63 c -1.23,4 -5.41,7.8 -12.37,7.8 -8.11,0 -14,-6.34 -14,-15.09 0,-8.75 5.72,-14.88 13.92,-14.88 a 12.218,12.218 0 0 1 11.08,6.2 l 0.28,0.46 8.45,-6 -0.26,-0.41 c -4.35,-6.73 -10.75,-10 -19.55,-10 -14.2,0 -24.9,10.59 -24.9,24.62 0,14.31 10.53,24.69 25,24.69 7.4,0 13.49,-2.28 17.6,-6.61 4.41,-4.62 6.52,-11.45 6.11,-19.77 z M 611.73,0.77 v 20.25 c 0,2.11 -0.11,4.1 0.08,5.95 A 43.068,43.068 0 0 0 607.65,22.8 L 583.88,0.49 583.74,0.35 h -1.67 v 48.54 h 10.08 V 28.64 c 0.072,-2 0.042,-4.003 -0.09,-6 a 44.533,44.533 0 0 0 4.16,4.23 l 23.8,22.3 0.14,0.14 h 1.67 V 0.77 Z M 422.21,16.75 c 0,4.49 -2.33,6.57 -7.33,6.57 h -7 V 10.25 h 7 c 5,0 7.33,2.07 7.33,6.5 z m 2,14 c 5.8,-2.5 9,-7.46 9,-14 0,-10 -6.74,-16 -18,-16 h -18 v 48.11 h 10.7 V 32.5 h 5.38 l 9.57,16.36 h 12.26 z m 40.75,1.96 h -5.43 l 4.13,-10.62 c 0.79,-2 1.3,-3.69 1.3,-3.69 0,0 0.52,1.71 1.3,3.69 l 4.14,10.57 z m 0.78,-32.48 h -1.56 L 442.7,48.77 h 10.49 l 3.13,-7.68 h 17.28 l 3.14,7.7 h 10.48 z"
+       id="path4"
+       inkscape:connector-curvature="0"
+       style="fill:#00a3e0" />
+  </g>
+  <defs
+     id="defs11">
+    <clipPath
+       id="a">
+      <path
+         d="M 0,0 H 684.42 V 49.72 H 0 Z"
+         id="path8"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </clipPath>
+    <clipPath
+       id="a-1">
+      <path
+         d="M 0,0 H 684.42 V 49.72 H 0 Z"
+         id="path8-2"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </clipPath>
+  </defs>
+  <g
+     style="fill:none"
+     clip-path="url(#a-1)"
+     id="g6-7"
+     transform="translate(-288.18799,279.70836)" />
+  <path
+     d="m 344.71213,187.64878 -118.60909,257.03099 24.766,67.67143 h 11.57978 L 334.0025,351.10443 c 6.48114,-13.02335 11.78996,-26.59783 15.86363,-40.5627 4.1093,13.78494 9.32488,27.2156 15.59589,40.16107 l 71.95529,161.64842 H 448.9971 L 473.69616,444.67977 355.15401,187.64878 Z m -136.27998,2.67742 h -75.23511 l 85.27538,233.53674 40.1611,-87.55119 z m 232.13112,145.18235 40.69656,88.3544 85.54313,-233.53674 h -75.9714 z"
+     id="path2-4"
+     inkscape:connector-curvature="0"
+     style="fill:#00a3e0;fill-opacity:1;stroke-width:6.6935153"
+     sodipodi:nodetypes="cccccccccccccccccccccc" />
+</svg>

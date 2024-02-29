@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Team</title>
+</head>
+<body>
+    <div>
+        <h1>Modify Team Details</h1>
+    </div>
+    <div>
+        <form action="/modify_team" method="post">
+            <label for="teamSelect">Select Team:</label>
+            <select id="teamSelect" name="teamSelect" required>
+                {% for team in teams %}
+                    <option value="{{ team.Team_id }}">{{ team.Team_Name }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <!-- Add more fields as needed -->
+            <label for="newName">New Team Name:</label>
+            <input type="text" id="newName" name="newName"><br>
+
+            <label for="newOrigin">New Team Origin:</label>
+            <input type="text" id="newOrigin" name="newOrigin"><br>
+
+            <!-- Add more fields as needed -->
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- ... (previous content) -->
+
+    <script>
+        document.getElementById('teamSelect').addEventListener('change', function() {
+            var teamSelect = document.getElementById('teamSelect');
+            var selectedIndex = teamSelect.selectedIndex;
+
+            // Check if a team is selected
+            if (selectedIndex !== -1) {
+                // Fetch the selected team's details from the JSON data
+                var teamsData = {{ teams | tojson }};
+                var selectedTeamId = teamSelect.options[selectedIndex].value;
+
+                var selectedTeamDetails = teamsData.find(function(team) {
+                    return team.Team_id == selectedTeamId;
+                });
+
+                // Display the selected team's details
+                document.getElementById('currentName').innerText = selectedTeamDetails ? selectedTeamDetails.Team_Name : '';
+                document.getElementById('currentOrigin').innerText = selectedTeamDetails ? selectedTeamDetails.Origin : '';
+            }
+        });
+    </script>
+</body>
+</html>

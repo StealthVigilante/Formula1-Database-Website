@@ -1,0 +1,31 @@
+<!-- team_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Details</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h2>Team Details</h2>
+    <div>
+        <img src="{{ url_for('static', filename='images/logos/' + team_name + '.png') }}" alt="{{ team_name }} Logo">
+    </div>
+    <div>
+        <h3>Team Name: {{ team_name }}</h3>
+        <p>Origin: {{ team_origin }}</p>
+        <p>Driver 1: {{ driver1_name }}</p>
+        <img src="{{ url_for('static', filename='images/drivers/' + driver1_image) }}" alt="{{ driver1_name }} Image">
+        <p>Driver 2: {{ driver2_name }}</p>
+        <img src="{{ url_for('static', filename='images/drivers/' + driver2_image) }}" alt="{{ driver2_name }} Image">
+    </div>
+    <div class="align-center">
+        <a href="{{ url_for('allteams') }}">
+            <input type="button" value="Back to All Teams">
+        </a>
+    </div>
+</body>
+</html>

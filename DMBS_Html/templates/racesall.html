@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Races</title>
+    <style>
+    body {
+            background-image: url('back.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: auto;
+            width: 50%; /* You can adjust this value based on your preference */
+        }
+    </style>
+</head>
+<body>
+    <h2>ALL RACES</h2>
+    <div class="tables-container">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Race Name</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for race in racesa %}
+                <tr>
+                    <td>{{ race.Race_Name }}</td>
+                    <td>{{ race.Date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <div class="align-center">
+            <a href="{{ url_for('index') }}">
+                <input type="button" value="Back to home">
+            </a>
+        </div>
+
+</body>
+</html>

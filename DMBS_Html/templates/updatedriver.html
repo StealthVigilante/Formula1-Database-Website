@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Driver Details</title>
+</head>
+<body>
+    <h1>Update Driver Details</h1>
+
+    <form method="POST" action="{{ url_for('updatedriver') }}">
+       <label for="driverSelect">Select Driver:</label>
+<select name="driverSelect" id="driverSelect">
+    {% for driver in drivers %}
+        <option value="{{ driver.Driver_Id }}">{{ driver.Driver_Name }}</option>
+    {% endfor %}
+</select>
+
+
+        <br>
+
+        <label for="newName">New Name:</label>
+        <input type="text" name="newName" id="newName" required>
+
+        <br>
+
+        <label for="newAge">New Age:</label>
+        <input type="number" name="newAge" id="newAge" required>
+
+        <br>
+
+        <label for="newNationality">New Nationality:</label>
+        <input type="text" name="newNationality" id="newNationality" required>
+
+        <br>
+
+        <input type="submit" value="Update Driver">
+    </form>
+</body>
+</html>

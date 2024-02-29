@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIA Admin</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 10vh 0 0 0;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333; /* Change the color as desired */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        div.align-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>FIA Admin</h1>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <a href="{{url_for('updatedriver')}}">UPDATE DRIVER</a>
+                </td>
+                <td>
+                    <a href="{{ url_for('modify_team')}}">UPDATE TEAM</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="{{ url_for('createdriver') }}">DRIVER<sup>New</sup></a>
+                </td>
+                <td>
+                    <a href="{{ url_for('createteam') }}">TEAM<sup>New</sup></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="{{ url_for('deletedriver') }}">DELETE DRIVER</a>
+                </td>
+                <td>
+                    <a href="{{ url_for('delete_team')}}">DELETE TEAM</a>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <div class="align-center">
+            <a href="{{ url_for('index') }}">
+                <input type="button" value="Back to home">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
