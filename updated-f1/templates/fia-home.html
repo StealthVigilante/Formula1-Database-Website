@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIA Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .card {
+            margin: 100px 100px;
+            width: 700px;
+            padding: 40px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .card a {
+            display: block;
+            padding: 20px 20px;
+            margin-top: 2px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card a:hover {
+            background-color: #333;
+            text-align: center;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .btn {
+            padding: 12px 12px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">FIA Admin</h1>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="{{url_for('updatedriver')}}" class="btn btn-dark">UPDATE DRIVER</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="{{ url_for('modify_team')}}" class="btn btn-dark">UPDATE TEAM</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="{{ url_for('createdriver') }}" class="btn btn-dark">DRIVER<sup>New</sup></a>
+                </div>
+                <div class="col-md-6">
+                    <a href="{{ url_for('createteam') }}" class="btn btn-dark">TEAM<sup>New</sup></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="{{ url_for('deletedriver') }}" class="btn btn-dark">DELETE DRIVER</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="{{ url_for('delete_team')}}" class="btn btn-dark">DELETE TEAM</a>
+                </div>
+            </div>
+        </div>
+        <div class="align-center mt-3">
+            <a href="{{ url_for('index') }}">
+                <input type="button" value="Back to home" class="btn btn-primary">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

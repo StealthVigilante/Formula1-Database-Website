@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructor Standings</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f7f7f7;
+      color: #000;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding : 0;
+    }
+
+    h2 {
+      color: black; /* Changed heading color to red */
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .tables-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px; /* Increased gap between tables */
+      margin-bottom: 20px;
+    }
+
+    table {
+      background-color: #fff;
+      color: #000;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px; /* Increased max-width */
+      border: 1px solid #000; /* Changed border color to black */
+      border-radius: 10px; /* Added border radius */
+    }
+
+    table th {
+      background-color: #ff0000; /* Changed heading background color to red */
+      color: #fff;
+      padding: 15px 60px;
+      text-align: center;
+      border: 1px solid #000; /* Changed border color to black */
+    }
+
+    table td {
+      padding: 15px 60px; /* Increased padding */
+      border: 1px solid #000; /* Changed border color to black */
+      text-align:center;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons-container a {
+      background-color: #000; /* Changed button background color to black */
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease; /* Added transition */
+    }
+
+    .buttons-container a:hover {
+      background-color: #333; /* Changed hover background color to dark gray */
+    }
+
+    .button {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding-top: 20px; padding-bottom: 20px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-size: 28px;">
+        F1 2023 DATABASE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('allteams') }}" style="color: #fff; font-size: 20px;">All Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('races') }}" style="color: #fff; font-size: 20px;">Races</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('all_drivers') }}" style="color: #fff; font-size: 20px;">All Drivers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="tables-container" style="margin-top: 20px;">
+    <div style="display: inline-block;">
+      <h3 style="color: #000; text-align: center; font-weight: bold;">Constructor Standings</h3> <!-- Added heading -->
+      <table>
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Team Name</th>
+            <th>Total Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for standing in constructorStandings %}
+            <tr>
+              <td>{{ standing.Pos }}</td>
+              <td>{{ standing.Team_Name }}</td>
+              <td>{{ standing.Total_Points }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div style="display: inline-block;">
+      <h3 style="color: #000; text-align: center; font-weight: bold;">Driver Standings</h3> <!-- Added heading -->
+      <table>
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Driver Name</th>
+            <th>Total Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for standing in driverStandings[:10] %}
+            <tr>
+              <td>{{ standing.Pos }}</td>
+              <td>{{ standing.Driver_Name }}</td>
+              <td>{{ standing.Total_Points }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="buttons-container">
+    <a href="{{ url_for('login') }}" class="btn btn-dark">Admin Mode</a>
+  </div>
+</body>
+</html>
