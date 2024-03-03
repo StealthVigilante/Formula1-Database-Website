@@ -69,7 +69,12 @@ JOIN
     allteam_data=cursor.fetchall()
     cursor.close()
     connection.close()
+    # print("Red" in request)
+    team = [team for team in allteam_data if str(team['Pos']) in str(request)]
+    # if team:
+    #     return render_template('teamdetails.html', team=team[0])
     return render_template('allteams.html', teams=allteam_data)
+
 
 @app.route('/races')
 def races():
@@ -383,6 +388,41 @@ def team_detail(team_id):
     connection.close()
 
     return render_template('team_detail.html', **team_details)
+
+
+def team_page(team_id):
+    # Fetch the team's data from your database or data source
+    team = get_team_data(team_id)  # Implement this function to fetch team data
+
+    # Render the team's page template with the team's data
+    return render_template('team.html', team=team)
+
+def get_team_data(team_id):
+    connection = mysql.connector.connect(host="localhost", user="root", password="test", database="formula")
+    cursor = connection.cursor(dictionary=True)
+
+    cursor.execute('''SELECT 
+                        t.Team_Name, 
+                        t.Origin, 
+                        d1.Driver_Name AS Driver1_Name, 
+                        d2.Driver_Name AS Driver2_Name,
+                        d1.Image AS Driver1_Image,
+                        d2.Image AS Driver2_Image
+                    FROM 
+                        teams t
+                    JOIN 
+                        drivers d1 ON t.Driver_1 = d1.Driver_Id
+                    JOIN 
+                        drivers d2 ON t.Driver_2 = d2.Driver_Id
+                    WHERE 
+                        t.Team_Id = %s''', (team_id,))
+
+    team_details = cursor.fetchone()
+
+    cursor.close()
+    connection.close()
+
+    return team_details
 
 if __name__ == '__main__':
     app.run(debug=True)
