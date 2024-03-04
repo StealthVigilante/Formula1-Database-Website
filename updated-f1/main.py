@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, redirect, url_for,send_from_directory
+from flask import Flask, render_template, jsonify, request, redirect, url_for,send_from_directory,flash, session
 import mysql.connector
 
 
@@ -397,6 +397,7 @@ def team_page(team_id):
     # Render the team's page template with the team's data
     return render_template('team.html', team=team)
 
+
 def get_team_data(team_id):
     connection = mysql.connector.connect(host="localhost", user="root", password="test", database="formula")
     cursor = connection.cursor(dictionary=True)
@@ -423,6 +424,45 @@ def get_team_data(team_id):
     connection.close()
 
     return team_details
+
+
+@app.route('/driver_details/<Driver_id>')
+def driver_details(Driver_id):
+    connection = mysql.connector.connect(host="localhost", user="root", password="test", database="formula")
+    cursor = connection.cursor(dictionary=True)
+
+    # Fetch driver details from the all_drivers_view table
+    cursor.execute('''SELECT d.Driver_Name, d.Nationality, d.Age,d.Team FROM all_drivers_view d,drivers dv WHERE
+     d.Driver_Name =(SELECT Driver_Name from drivers WHERE Driver_id= %s ) LIMIT 1;''', (Driver_id,))
+
+    driver_details = cursor.fetchone()
+
+    cursor.close()
+    connection.close()
+
+    return render_template('driver_details.html', Driver_id=Driver_id, **driver_details)
+
+
+@app.route('/logind', methods=['POST'])
+def driver_login():
+    dusername = request.form['dusername']
+    dpassword = request.form['dpassword']
+
+    # Check if the user credentials are valid
+    connection = mysql.connector.connect(host="localhost", user="root", password="test", database="formula")
+    cursor = connection.cursor()
+
+    # Fetch driver_id and password from driver_password table
+    cursor.execute("SELECT Driver_id, Password FROM driver_passwords WHERE Driver_id = %s", (dusername,))
+    result = cursor.fetchone()
+
+    if result and dpassword == result[1]:
+        # Redirect to driver details page with the driver_id
+        return redirect(url_for('driver_details', Driver_id=result[0]))
+    else:
+        # If credentials are not valid, render the login page again with an error message
+        return render_template('login.html', error='Invalid credentials')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
