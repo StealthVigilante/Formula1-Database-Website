@@ -33,32 +33,46 @@
         }
 
         .card {
-            margin: 100px 100px;
-            width: 700px;
-            padding: 40px;
-            border-radius: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
+    width: 40%;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px; /* Adjust as needed */
+}
+
 
         .card a {
-            display: block;
-            padding: 20px 20px;
-            margin-top: 2px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            text-align: center;
-            text-decoration: none;
-            color: #fff;
-            background-color: #000;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    height: 100px;
+    min-width: 200px; /* Set a fixed minimum width for the buttons */
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
 
-        .card a:hover {
-            background-color: #333;
-            text-align: center;
-        }
+.card a:hover {
+    background-color: #333;
+    text-align: center;
+}
+
+
+.card a:hover {
+    background-color: #333;
+    text-align: center;
+}
+
 
         .align-center {
             text-align: center;
